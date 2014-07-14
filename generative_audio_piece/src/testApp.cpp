@@ -6,7 +6,7 @@ void testApp::setup(){
     ///   SPHERES SETUP   ///
     
     ofSetVerticalSync(true);
-    ofSetFullscreen(false);
+    ofSetFullscreen(true);
     ofSetWindowTitle("M.Romeo");
     ofSetFrameRate(60);
     ofBackground(255);
