@@ -5,36 +5,48 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8AA8E6B7-0483-4A6B-8D95-5B94AFD71694</string>
+	<string>5BF58C01-D5C2-4B06-AB32-D0D1407B5704</string>
 	<key>IDESourceControlProjectName</key>
 	<string>generative_audio_piece</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0D47110D-EEF9-4EDB-828F-80BB73B039C5</key>
-		<string>https://github.com/fakelove/experiments_sound_generation-.git</string>
+		<key>05551A49-6E80-4C97-956E-F450F0BFEA95</key>
+		<string>https://github.com/nightshining/orbs.git</string>
+		<key>156FB7BE-FCB2-45E1-924A-FFE38E655F2A</key>
+		<string>https://github.com/admsyn/ofxAudioUnit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>generative_audio_piece/generative_audio_piece.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0D47110D-EEF9-4EDB-828F-80BB73B039C5</key>
+		<key>05551A49-6E80-4C97-956E-F450F0BFEA95</key>
 		<string>../../..</string>
+		<key>156FB7BE-FCB2-45E1-924A-FFE38E655F2A</key>
+		<string>../../../../../addons/ofxAudioUnit</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/fakelove/experiments_sound_generation-.git</string>
+	<string>https://github.com/nightshining/orbs.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0D47110D-EEF9-4EDB-828F-80BB73B039C5</string>
+	<string>05551A49-6E80-4C97-956E-F450F0BFEA95</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0D47110D-EEF9-4EDB-828F-80BB73B039C5</string>
+			<string>156FB7BE-FCB2-45E1-924A-FFE38E655F2A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>experiments_sound_generation-</string>
+			<string>ofxAudioUnit</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>05551A49-6E80-4C97-956E-F450F0BFEA95</string>
+			<key>IDESourceControlWCCName</key>
+			<string>orbs</string>
 		</dict>
 	</array>
 </dict>

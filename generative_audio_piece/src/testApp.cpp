@@ -85,6 +85,12 @@ void testApp::setup(){
     font.loadFont("Junction-light.otf", 12);
     title.loadFont("Junction-bold.otf", 20);
     
+    ///    GENERATIVE MODE    ///
+    
+    generativeMode = false;
+    radius = 25;
+    modeColor = ofColor::black;
+    indicator = "off";
 }
 
 //--------------------------------------------------------------
@@ -129,14 +135,20 @@ void testApp::update(){
         introVolume = 0.95;
     }
     
-    //UNCOMMENT to automatically generate random tones
+    //MODE
     
-    /* generateRandomSample = ofRandom(100);
+    if (generativeMode == true) {
+
+        randomPlay();
+        modeColor = redObjects[0].colorChange;
+        indicator = "on";
+        
+    } else if (!generativeMode) {
+        
+        modeColor = ofColor::black;
+        indicator = "off";
     
-    if (generateRandomSample == 50) {
-       triggerSample();
-    } */
-    
+    }
     ///     INTERACTION UPDATE     ///
     ///Trigger samples by movement
     
@@ -202,6 +214,20 @@ void testApp::draw(){
     ofNoFill();
     ofCircle(ofGetWidth() - 200, 100, 50);
     ofPopMatrix();
+    
+    
+    //Mode Button
+    ofPushStyle();
+    ofPushMatrix();
+    randomButton.set(ofGetWidth() - 325, ofGetHeight() - 100);
+    font.drawString("SPACEBAR auto tone generator", ofGetWidth() - 275, ofGetHeight() - 100);
+    font.drawString(indicator, ofGetWidth() - 290, ofGetHeight() - 125);
+    ofSetCircleResolution(100);
+    ofSetColor(modeColor, 200);
+    ofFill();
+    ofCircle(randomButton, radius);
+    ofPopMatrix();
+    ofPopStyle();
   
 }
 
@@ -214,18 +240,29 @@ void testApp::triggerSample() {
     
 }
 
+void testApp::randomPlay() {
+    
+    generateRandomSample = ofRandom(100);
+    
+    if (generateRandomSample == 50) {
+        triggerSample();
+    }
+
+}
+
+
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
 
-    if (key == ' ') {
-        
-        triggerSample();
-    }
-    
+   
     if (key == 'd') {
         delay.showUI();
     }
-   
+    if (key == ' ') {
+
+    generativeMode = !generativeMode;
+    
+    }
     
 }
 
@@ -247,6 +284,14 @@ void testApp::mouseDragged(int x, int y, int button){
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
 
+    
+    int dist = ofDist(randomButton.x, randomButton.y, x, y);
+    
+    if (dist < radius) {
+        generativeMode = !generativeMode;
+    }
+    
+    
 }
 
 //--------------------------------------------------------------

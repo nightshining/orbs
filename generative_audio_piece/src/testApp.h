@@ -51,6 +51,13 @@ class testApp : public ofBaseApp{
     ///Font
     ofTrueTypeFont font, title;
     
+    //Generative Mode On
+    bool generativeMode;
+    void randomPlay();
+    ofPoint randomButton;
+    int radius;
+    ofColor modeColor;
+    string indicator;
     
     /* NOTE:
      
